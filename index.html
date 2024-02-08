@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Caixa</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Fluxo de Caixa</h2>
+
+    <!-- Formulário para registrar transações -->
+    <form action="registrar.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required>
+        <label for="produto">Produto:</label>
+        <input type="text" name="produto" required>
+        <label for="valor">Valor:</label>
+        <input type="number" name="valor" step="0.01" required>
+        <label for="forma_pagamento">Forma de Pagamento:</label>
+        <select name="forma_pagamento" required>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="credito">Crédito</option>
+            <option value="debito">Débito</option>
+        </select>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Botões para visualizar histórico -->
+    <div>
+        <a href="historico.php?forma_pagamento=dinheiro">Histórico Dinheiro</a>
+        <a href="historico.php?forma_pagamento=credito">Histórico Crédito</a>
+        <a href="historico.php?forma_pagamento=debito">Histórico Débito</a>
+        <a href="historico.php">Histórico Geral</a>
+    </div>
+</body>
+</html>
